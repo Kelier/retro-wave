@@ -1,0 +1,61 @@
+html,
+body {
+  background: #000000;
+  color: #ffffff;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+canvas {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  max-width: 500px;
+  max-height: 300px;
+  background: #000;
+  margin: auto;
+  filter: blur(3px) grayscale(70%) hue-rotate(360deg);
+  transform: translateX(60px);
+}
+
+input {
+  margin: 0 auto;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-size: 30px;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+}
+
+
+.slogan {
+  font-family: cursive;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.src {
+  font-family: cursive;
+  font-weight: 600;
+  font-size: 10px;
+  text-align: right;
+  transform: translateY(60px);
+  color: #8489a5;
+  text-shadow: 0px 0px 20px #5d5050;
+  position: relative;
+  right: 50px;
+}

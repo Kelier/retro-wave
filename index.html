@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wave</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="slogan">
+    <br>
+  </div>
+  <div class="main">
+    <input type="text" value="🍻" />
+    <canvas text="🍻" size=128></canvas>
+  </div>
+  <div class="src">
+    Copyed by Yan . Inspired by Aslanon .
+  </div>
+  <script src="./index.js"></script>
+
+  <script>
+    let ctx = document.querySelector('canvas').getContext('2d');
+    let canvas = ctx.canvas;
+    let text = canvas.getAttribute('text');
+    let fontSize = canvas.getAttribute('size');
+    canvas.width = canvas.getBoundingClientRect().width;
+    canvas.height = canvas.getBoundingClientRect().height;
+
+    let pixels = [];
+    let animation = {
+      radius: 4,
+      move: 0.25,
+      pull: 0.15,
+      dampen: 0.95,
+      density: 5
+    };
+
+    let mouse = new Mouse(canvas);
+    let draw = new Draw(ctx);
+
+    init();
+    frame();
+
+    let carbon = document.querySelector('input');
+    let ver = document.querySelector('canvas');
+    carbon.addEventListener('change', (e) => {
+      ver.setAttribute('text', e.target.value);
+      ctx.clearRect(0,0,canvas.width,canvas.height);  
+
+      text = e.target.value;
+      init();
+    });
+
+  </script>
+</body>
+
+</html>
